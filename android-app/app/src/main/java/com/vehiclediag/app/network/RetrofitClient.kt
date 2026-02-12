@@ -16,7 +16,7 @@ object RetrofitClient {
 
     // Android emulator: 10.0.2.2 maps to host machine's localhost
     // Physical device: use your PC's local IP (e.g., 192.168.x.x)
-    private const val BASE_URL = "http://10.0.2.2:8000/"
+    private const val BASE_URL = "http://192.168.137.1:8000/"
 
     private val loggingInterceptor = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BODY
