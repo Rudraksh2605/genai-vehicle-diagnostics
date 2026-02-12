@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./config:/app/config
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload
+    restart: unless-stopped
+
+  # Uncomment to add a database in the future
+  # db:
+  #   image: postgres:15
+  #   environment:
+  #     POSTGRES_DB: vehicle_diagnostics
+  #     POSTGRES_USER: admin
+  #     POSTGRES_PASSWORD: changeme
+  #   ports:
+  #     - "5432:5432"

@@ -1,0 +1,7 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.VehicleDiagnostics" parent="android:Theme.Material.NoActionBar">
+        <item name="android:statusBarColor">#FF0F1923</item>
+        <item name="android:navigationBarColor">#FF1A2733</item>
+        <item name="android:windowBackground">#FF0F1923</item>
+    </style>
+</resources>
